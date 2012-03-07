@@ -1,0 +1,20 @@
+<script="text/javascript"></script>
+<script>
+function article()
+{
+alert("Edit your aticle");
+}
+</script>
+<%= div_for article do %>
+<h3>
+<%= link_to article.title, article %>
+<% if article.owned_by? current_user %>
+<div class='actions'>
+<%= link_to "Edit", edit_article_path(article),:onclick=>"article()" %>
+<%= link_to "delete", article, :confirm =>"Are You Sure?", :method => :delete %>
+</div>
+<% end %>
+</h3>
+<%= simple_format raw(article.body) %>
+<% end %>
+

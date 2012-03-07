@@ -1,0 +1,5 @@
+<h1> Profile Details </h1>
+<table>
+<%@profile.each do |profile|%>
+<%= profile.name%>
+<%end%>

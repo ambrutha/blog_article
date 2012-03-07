@@ -1,0 +1,20 @@
+<script="text/javascript"></script>
+<script>
+function article()
+{
+alert("Edit your aticle");
+}
+</script>
+
+<%= render @article %>s	
+<h3>Comments</h3>
+<%= render @article.comments %>
+<%= render :file => 'comments/new' %>
+<%= link_to 'Email a friend', '#', :onclick => "$('#notify_friend_form').slideDown()" %>
+<%= render 'notify_friend' %>
+
+<%= link_to 'Edit', edit_article_path(@article), :onclick=>"article()" %> |
+<%= link_to 'Back', arti_url %>
+<%= link_to "new comment", new_article_comment_path(@article, :format => :js), :remote => true, :id => 'new_comment_link' %>
+
+

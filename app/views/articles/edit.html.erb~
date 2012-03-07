@@ -1,0 +1,6 @@
+<h1>Editing Article</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', arti_url %> |
+<%= link_to 'Back', arti_url %>

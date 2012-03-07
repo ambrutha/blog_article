@@ -1,0 +1,17 @@
+<%= form_for(@profile) do |profile| %><br>
+<div class="field"><%= profile.label:Name%><%= profile.text_field:name%></div>
+<div class="field"><%= profile.label:Color%><%= profile.text_field:color%></div>
+<div class="field"><%= profile.label:Biodata%><%= profile.text_field:biodata%></div>
+<div class="field"><%= profile.label:twitter%><%= profile.text_field:twitter%></div>
+<div class="field"><%= profile.label:DOB%><%= profile.text_field :birthday, :class=>"datepick"%></div>
+<%= profile.submit%>
+<%end%>
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/redmond/jquery-ui.css"">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+<script>
+      $(function() {
+              $( ".datepick" ).datepicker();
+      });
+</script>
+
